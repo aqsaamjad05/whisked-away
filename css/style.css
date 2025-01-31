@@ -5,3 +5,50 @@
     --accent-color: #B48D6D;
     --text-color: #3E3A3A;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    font-family: 'Indie Flower', sans-serif;
+}
+
+.left-nav, .title, .right-nav {
+    margin: 0px;
+    padding: 0px;
+}
+
+.left-nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    height: 100px;
+    border-radius: 360px;
+}
+.title {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
