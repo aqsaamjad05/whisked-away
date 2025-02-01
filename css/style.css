@@ -56,12 +56,13 @@ body {
 
 
 .hero {
+    position: relative;
     padding-top: 0.1px;
     display: grid;
     grid-template-rows: 1fr auto 1fr;
     grid-template-columns: 1fr;
-    height: 500px;
-    background-image: url("../images/hero-background.jpg"); 
+    height: 600px;
+    background-image: url("../images/hero-background.png"); 
     background-size: cover;
     background-position: center;
     color: white;
@@ -102,16 +103,23 @@ body {
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
 }
 
 .hero-cta img {
     width: 50px;
     height: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
 }
+
 .hero-cta a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     font-family: 'Indie Flower', sans-serif;
     font-weight: bold;
+}
+
+.hero-cta:hover {
+    transform: translateY(-10px);
 }
