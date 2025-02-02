@@ -123,3 +123,8 @@ body {
 .hero-cta:hover {
     transform: translateY(-10px);
 }
+
+.card .img img {
+    width: 140px;
+    
+}
