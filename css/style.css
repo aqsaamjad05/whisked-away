@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=swap');
+
 :root {
     --logo-color: #E7CCBD;
     --secondary-color: #E1B0A4;
@@ -124,8 +126,67 @@ body {
     transform: translateY(-10px);
 }
 
+.popular-recipes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    min-height: 100vh;
+}
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel .card {
+    height: 400px;
+    list-style: none;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.card .img {
+    width: 100%;
+    height: auto;
+}
+
 .card .img img {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    color: var(--text-color);
+    font-size: 1.56rem;
+    font-family: 'Pacifico';
+    margin: 30px 0 5px;
+}
+
+.card span {
+    color: var(--text-color);
+    font-size: 1.31rem;
+    font-family: 'Indie Flower';
+    text-align: center;
 }
