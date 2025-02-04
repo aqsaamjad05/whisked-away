@@ -164,6 +164,8 @@ body {
 }
 
 .wrapper .carousel {
+    padding-left: 0px; /* so carousel.scrollLeft === 0 */
+    padding-right: 1px; /* so carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth */
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
@@ -182,6 +184,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+    transition: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
 }
 
 .carousel.dragging {
