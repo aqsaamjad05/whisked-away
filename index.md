@@ -1,6 +1,17 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: landing
+title: Home
 ---
+
+<section class="hero">
+    <img src="{{ '/assets/images/whisked-away-logo-transparent.png' | relative_url }}" alt="Whisked Away logo" class="logo">
+    <h1>Whisked Away</h1>
+    <p>our favourite baking recipes all in one place</p>
+    <nav>
+        <ul>
+            <li><a href="">view all recipes</a></li>
+            <li><a href="" class="cta-btn">Whisk Me Away!</a></li>
+            <li><a href="">submit a recipe</a></li>
+        </ul>
+    </nav>
+</section>

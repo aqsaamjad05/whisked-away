@@ -1,0 +1,114 @@
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* start, not center, to keep it higher up */
+    background-color: var(--bg);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15vh; /* pushes it down a bit but still high on page */
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.hero .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 7rem;
+    color: var(--accent-dark);
+    margin: 0;
+    line-height: 1;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.hero nav a {
+    position: relative; /* eeded for ::after to anchor properly */
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--accent-dark);
+    transition: color 0.3s ease;
+}
+/* underline animation */
+.hero nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--highlight);
+    transition: width 0.4s ease;
+}
+.hero nav a:hover {
+    color: var(--highlight);
+}
+.hero nav a:hover::after {
+    width: 100%;
+}
+
+.hero nav a.cta-btn {
+    font-size: 1.1rem;
+    display: inline-block;
+    animation: bounce 2.5s infinite ease-in-out;
+}
+/* bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  15% {
+    transform: translateY(0);
+  }
+  21% {
+    transform: translateY(-1px);
+  }
+  24% {
+    transform: translateY(1px);
+  }
+  26% {
+    transform: translateY(-0.5px);
+  }
+  28% {
+    transform: translateY(0.5px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
