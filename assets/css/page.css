@@ -1,0 +1,62 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 1rem;
+    height: 60px;
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--accent-dark);
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+.brand img {
+    height: 30px;
+    width: auto;
+}
+.brand:hover{
+    transform: scale(1.1);
+}
+
+nav {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+nav a{
+    position: relative; /* needed for ::after to anchor properly */
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+/* underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--highlight);
+    transition: width 0.4s ease;
+}
+nav a:hover {
+    color: var(--highlight);
+}
+nav a:hover::after {
+    width: 100%;
+}

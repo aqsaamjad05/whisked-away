@@ -9,7 +9,7 @@ title: Home
     <p>our favourite baking recipes all in one place</p>
     <nav>
         <ul>
-            <li><a href="">view all recipes</a></li>
+            <li><a href="/recipes/">view all recipes</a></li>
             <li><a href="" class="cta-btn">Whisk Me Away!</a></li>
             <li><a href="">submit a recipe</a></li>
         </ul>
