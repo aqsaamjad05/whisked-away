@@ -25,6 +25,11 @@ url: "https://aqsaamjad05.github.io" # the base hostname & protocol for your sit
 markdown: kramdown
 permalink: pretty
 
+collections:
+  recipes:
+    output: true
+    permalink: /recipes/:name/
+
 # Build settings
 theme: minima 
 plugins:

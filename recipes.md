@@ -39,3 +39,17 @@ title: All Recipes
     </button>
   </div>
 </section>
+
+<br><br><br>
+<section class="browse-recipes">
+  <h2>Browse All Recipes</h2>
+  <br><br>
+  <div class="recipe-grid">
+    {% for recipe in site.recipes %}
+      <a href="{{ recipe.url | relative_url }}" class="recipe-card">
+        <img src="{{ recipe.image | relative_url }}" alt="{{ recipe.title }}">
+        <h3>{{ recipe.title }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>
