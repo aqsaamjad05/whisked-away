@@ -5,7 +5,7 @@ image: '/assets/images/brownies.jpg'
 prep_time: "15m"
 cook_time: "10m"
 difficulty: Easy
-serves: 8
+serves: 12-15
 ingredients:
   - (300g) Chocolate
   - (200g) Unsalted Butter
