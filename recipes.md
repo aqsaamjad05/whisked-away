@@ -13,24 +13,24 @@ title: All Recipes
         <span class="material-icons">chevron_left</span>
     </button>
     <div class="carousel">
-      <a href="" class="recipe-card">
-        <img src="{{ '/assets/images/brownies.jpeg' | relative_url }}" alt="Brownies">
+      <a href="brownies/" class="recipe-card">
+        <img src="{{ '/assets/images/brownies.jpg' | relative_url }}" alt="Brownies">
         <h3>Brownies</h3>
       </a>
       <a href="" class="recipe-card">
-        <img src="{{ '/assets/images/cinnamon-rolls.jpeg' | relative_url }}" alt="Cinnamon Rolls">
+        <img src="{{ '/assets/images/no-image-available.png' | relative_url }}" alt="Cinnamon Rolls">
         <h3>Cinnamon Rolls</h3>
       </a>
       <a href="" class="recipe-card">
-        <img src="{{ '/assets/images/apple-crumble.jpeg' | relative_url }}" alt="Apple Crumble">
+        <img src="{{ '/assets/images/no-image-available.png' | relative_url }}" alt="Apple Crumble">
         <h3>Apple Crumble</h3>
       </a>
       <a href="" class="recipe-card">
-        <img src="{{ '/assets/images/red-velvet-cake.jpeg' | relative_url }}" alt="Red Velvet Cake">
+        <img src="{{ '/assets/images/no-image-available.png' | relative_url }}" alt="Red Velvet Cake">
         <h3>Red Velvet Cake</h3>
       </a>
       <a href="" class="recipe-card">
-        <img src="{{ '/assets/images/carrot-cake.jpeg' | relative_url }}" alt="Carrot Cake">
+        <img src="{{ '/assets/images/no-image-available.png' | relative_url }}" alt="Carrot Cake">
         <h3>Carrot Cake</h3>
       </a>
     </div>

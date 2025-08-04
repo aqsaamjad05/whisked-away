@@ -6,7 +6,7 @@ title: Home
 <section class="hero">
     <img src="{{ '/assets/images/whisked-away-logo-transparent.png' | relative_url }}" alt="Whisked Away logo" class="logo">
     <h1>Whisked Away</h1>
-    <p>our favourite baking recipes all in one place</p>
+    <p class="subtitle">our favourite baking recipes all in one place</p>
     <nav>
         <ul>
             <li><a href="/recipes/">view all recipes</a></li>

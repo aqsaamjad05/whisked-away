@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | Whisked Away</title>
+
+    <!-- Google Icons Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/recipe.css' | relative_url }}">
+
+</head>
+
+<body>
+    <header>
+        {% include logo.html%}
+    </header>
+    <main>
+        <article class="recipe">
+
+            <a href="/recipes" class="back-link">
+                <span class="material-icons">chevron_left</span>
+                back to all recipes</a>
+
+            <div class="recipe-title">
+                <h2>{{ page.title }}</h2>
+                <p class="subtitle">by <strong>Aqsa</strong></p>
+            </div>
+            
+            {% if page.image %}
+                <img class="recipe-image" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+            {% else %}
+                <img class="recipe-image" src="{{ '/assets/images/no-image-available.png' | relative_url }}" alt="No image available">
+            {% endif %}
+
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <span class="material-icons">schedule</span>
+                    <span><strong>Prep:</strong> {{ page.prep_time }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="material-icons">timer</span>
+                    <span><strong>Cook:</strong> {{ page.cook_time }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="material-icons">restaurant_menu</span>
+                    <span><strong>Difficulty:</strong> {{ page.difficulty }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="material-icons">groups</span>
+                    <span><strong>Serves:</strong> {{ page.serves }}</span>
+                </div>
+            </div>
+
+            <br>
+
+            <h3>Ingredients</h3>
+            <ul>
+                {% for item in page.ingredients %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>Instructions</h3>
+            <ol>
+                {% for step in page.instructions %}
+                <li>{{ step }}</li>
+                {% endfor %}
+            </ol>
+
+            {% if page.notes %}
+                <h3>Notes & Tips</h3>
+                <ul>
+                {% for item in page.notes %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        </article>
+    </main>
+    
+    <footer>
+        {% include footer.html %}
+    </footer>
+    <!-- JS -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
